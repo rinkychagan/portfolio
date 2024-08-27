@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Chivo:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Teko:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.name {
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.job {
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+.logo {
+  width: 45%;
+  animation: fly 5s infinite ease-in-out;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: calc(100vh - 60px);
+  left: calc(50% - 14px);
+  width: 0;
+  height: 30px;
+  border-radius: 2px;
+  animation: jumpInfinite 1.5s infinite;
+}
+
+.arrow::before {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  left: -11px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  border-radius: 4px;
+  border-color: lightgreen;
+
+  transform: rotateZ(45deg);
+}
+
+@keyframes jumpInfinite {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+.title {
+  font-family: "Chivo", sans-serif;
+  font-weight: 800;
+}
+
+.border {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background-color: #ebe2d0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.skillsborder {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.skillp {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  color: #448158;
+  animation: slide 50s infinite linear;
+}
+
+.skillp:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

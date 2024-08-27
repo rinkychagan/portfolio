@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lilita+One&family=Teko:wght@300..700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.border {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.skillsborder {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.skillp {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+  animation: slide 50s infinite linear;
+}
+
+.skillp:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

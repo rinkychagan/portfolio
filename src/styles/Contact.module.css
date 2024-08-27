@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lilita+One&family=Teko:wght@300..700&display=swap");
+
+.title {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  text-shadow: 2px 4px #000000;
+}
+
+.noshadow {
+  text-shadow: 0px 0px #000000;
+}
+
+.socials {
+  font-family: "Bree Serif", serif;
+}

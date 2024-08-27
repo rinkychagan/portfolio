@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lilita+One&family=Teko:wght@300..700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 90px;
+  margin-bottom: 100px;
+}
+
+.divider {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+.text {
+  flex: 1;
+  color: #000aff;
+  margin: 15px;
+  padding: 20px;
+}
+
+.abouttitle {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-size: 70px;
+  text-decoration: underline;
+  font-style: normal;
+  margin-bottom: 15px;
+}
+
+.aboutparagraph {
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+.sep {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.photo {
+  width: 528px;
+  height: 624px;
+  background-color: bisque;
+  margin: 0 10px;
+}
+
+.border {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.skillsborder {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.skillp {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+  animation: slide 50s infinite linear;
+}
+
+.skillp:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.secondcontainer {
+  background-color: #eba8de;
+  width: 100%;
+  height: 100%;
+  padding: 110px;
+  padding-right: 100px;
+  color: #000aff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.listskills {
+  display: flex;
+  flex-direction: column;
+}
+
+.education,
+.experienceandtech,
+.moreskills {
+  margin-bottom: 15px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: ❀;
+}
+
+li {
+  margin-right: 50px;
+  list-style-type: none;
+}
+
+li::marker {
+  content: "❀";
+}
+
+.wall {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.title {
+  font-family: "Lilita One", sans-serif;
+  display: inline-block;
+  font-style: normal;
+  font-size: 30px;
+  text-align: center;
+
+  border: 3px solid #000aff;
+  border-radius: 60px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.year,
+.school,
+.role,
+.info {
+  font-family: "Teko", serif;
+  font-weight: 500;
+}
+
+.year {
+  font-size: 30px;
+}
+
+.school,
+.info {
+  font-size: 25px;
+}
+
+.role {
+  font-size: 20px;
+}
+
+.twolist {
+  display: flex;
+  flex-direction: column;
+}
+
+.listing {
+  display: flex;
+  flex-direction: row;
+}
+
+.otherlist {
+  display: inline;
+  flex-direction: column;
+}
+
+.toaster {
+  width: 20%;
+}

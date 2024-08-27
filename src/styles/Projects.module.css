@@ -1,0 +1,9 @@
+/* .container {
+  height: 100vh;
+} */
+
+.card {
+  width: 900px;
+  height: 700px;
+  position: sticky;
+}

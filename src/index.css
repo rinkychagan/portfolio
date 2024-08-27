@@ -1,13 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Chivo:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Teko:wght@300..700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+:root {
+  --main-white: #f0f0f0;
+  --main-pink: #e96da2;
+  --main-blue: #454eea;
+  --light-green: #9ec584;
+  --light-blue: #a7c9f5;
+  --light-pink: #f1b9e8;
+  --medium-blue: #6ca8f5;
+  --main-darkest: #0c0d1c;
 }

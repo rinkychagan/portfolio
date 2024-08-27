@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Chivo:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Teko:wght@300..700&display=swap");
+
+.menu {
+  z-index: 100; /* Lower than the header but higher than other content */
+  position: fixed; /* Fixed position */
+  top: 0; /* Align with the top */
+  right: 0; /* Align with the right edge */
+  width: 33%; /* Adjust width as needed */
+  height: 100vh; /* Full viewport height */
+  background-color: #0000ff; /* Background color */
+}
+
+.links {
+  text-decoration: none;
+  margin: 4px;
+  font-family: "Chivo", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: whitesmoke;
+}
