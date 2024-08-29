@@ -22,14 +22,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-:root {
-  --main-white: #f0f0f0;
-  --main-pink: #e96da2;
-  --main-blue: #454eea;
-  --light-green: #9ec584;
-  --light-blue: #a7c9f5;
-  --light-pink: #f1b9e8;
-  --medium-blue: #6ca8f5;
-  --main-darkest: #0c0d1c;
-}

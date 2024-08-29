@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { HiSparkles } from "react-icons/hi2";
 import { PiStarFourFill } from "react-icons/pi";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const handleClick = () => {
@@ -17,7 +18,7 @@ export default function Contact() {
       <Stairs>
         <div className="min-h-screen bg-[#F1DCC9] py-6 flex flex-col justify-center items-center sm:py-8 text-[#F56C9A]">
           <div className="flex items-center mb-4 mt-2">
-            <HiSparkles className="animate-pulse w-10 h-10 sm:w-10 sm:h-10 mr-2 rotate-12" />
+            <HiSparkles className="animate-wiggle w-10 h-10 sm:w-20 sm:h-20 mr-2 rotate-12" />
             <h3 className="font-bold text-4xl sm:text-5xl lg:text-6xl font-bree-serif text-center">
               Contact me here:
             </h3>
@@ -25,7 +26,7 @@ export default function Contact() {
           </div>
           <button
             onClick={handleClick}
-            className="text-xl sm:text-2xl hover:underline font-chivo mt-2"
+            className="text-xl sm:text-2xl hover:underline font-chivo"
           >
             rinkychagan@gmail.com
           </button>
@@ -39,7 +40,7 @@ export default function Contact() {
           >
             LinkedIn
           </a>
-          <PiStarFourFill className="animate-pulse w-8 h-8 sm:w-10 sm:h-10 ml-12 pt-4 -rotate-3" />
+          <PiStarFourFill className="animate-wiggle w-8 h-8 sm:w-10 sm:h-10 ml-12 pt-4 -rotate-3" />
         </div>
       </Stairs>
     </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import Stairs from "./../components/Stairs/stairs";
+import { HiSparkles } from "react-icons/hi2";
+import { PiStarFourFill } from "react-icons/pi";
 
 export default function About() {
   return (
@@ -16,15 +18,18 @@ const SectionOne = () => {
     <section className="sticky top-0 bg-[#F18DA7] min-h-screen flex items-center justify-center px-4 py-6">
       <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 text-[#448158]">
         <div className="flex-shrink-0">
+          <PiStarFourFill className="text-[#EBE2D0] animate-wiggle w-10 h-10 sm:w-10 sm:h-10 mr-2 rotate-12" />
           <img
             src="me.png"
             alt="me"
             className="w-64 lg:w-80 max-w-full object-cover -rotate-12"
           />
+          <HiSparkles className=" text-[#EBE2D0] animate-pulse w-10 h-10 sm:w-10 sm:h-10  rotate-12" />
         </div>
-        <div className="text-center lg:text-left max-w-md lg:max-w-lg text-sm leading-relaxed font-chivo space-y-4">
+        <div className="text-center lg:text-left max-w-md lg:max-w-lg text-sm leading-relaxed font-bree-serif space-y-4">
+          <HiSparkles className="text-[#EBE2D0] animate-pulse w-10 h-10 sm:w-10 sm:h-10 ml-20 rotate-12" />
           <p className="text-lg font-semibold">
-            <span className="text-2xl">H</span>ello there!
+            <span className="text-3xl">H</span>ello there!
           </p>
           <p>Nice to meet you!</p>
           <p>I'm Rinky, a junior full-stack developer from Portugal.</p>
@@ -32,8 +37,7 @@ const SectionOne = () => {
             I've been passionate about technology ever since I was a kid. It all
             started with my time on social media platforms like Tumblr, where
             everyone had these cool customized blogs. That’s probably where my
-            love for web design began. (And yes, maybe I did have a blog where
-            I’d reblog all my favorite things!)
+            love for web design began.
           </p>
           <p>
             Although I didn’t dive into the world of tech until recently, a
@@ -62,12 +66,14 @@ const SectionOne = () => {
               href="cvdownload.pdf"
               download="cvdownload.pdf"
             >
-              download
+              download my CV
             </a>
-            my CV to learn more about my skills and experience. Don’t hesitate
-            to reach out, I look forward to hearing from you!
+            to learn more about my skills and experience. Don’t hesitate to
+            reach out, I look forward to hearing from you!
           </p>
+          <PiStarFourFill className="text-[#EBE2D0] animate-wiggle w-10 h-10 sm:w-10 sm:h-10 rotate-12" />
         </div>
+        <HiSparkles className="text-[#EBE2D0] animate-pulse w-10 h-10 sm:w-20 sm:h-20 mr-2 mt-40 rotate-12" />
       </div>
     </section>
   );

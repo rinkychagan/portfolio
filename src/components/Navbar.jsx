@@ -31,27 +31,33 @@ export default function Navbar() {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.5, // Reduced duration for smoother transitions
+        duration: 0.5,
         ease: [0.7, 0, 0.24, 1],
       },
     },
   };
 
   return (
-    <div>
-      {/* Navbar Toggle Button */}
-      <div className="fixed top-0 right-0 w-full flex justify-end p-4 bg-transparent z-50">
-        <TiThMenu
-          className="w-12 h-12 bg-white p-2 rounded-full cursor-pointer"
-          onClick={() => setOpenMenu((prev) => !prev)}
-        />
+    <div className="">
+      <div className="fixed top-0 left-0 w-full flex justify-between items-center p-4 bg-transparent z-50">
+        <a
+          href="/home"
+          className="text-[#448158] font-teko font-semibold text-lg"
+        >
+          rinky
+        </a>
+        <div className="flex justify-end">
+          <TiThMenu
+            className="w-12 h-12 bg-white p-2 rounded-full cursor-pointer text-[#448158]"
+            onClick={() => setOpenMenu((prev) => !prev)}
+          />
+        </div>
       </div>
 
-      {/* Side Menu */}
       <AnimatePresence>
         {openMenu && (
           <motion.div
-            className="fixed top-0 right-0 w-full h-full bg-[#A1C85A] z-40 flex flex-col justify-between items-center text-4xl lg:w-[20%]"
+            className="fixed top-0 right-0 w-full h-full bg-[#A1C85A] z-40 flex flex-col justify-between items-center text-4xl lg:w-[20%] shadow shadow-lg"
             variants={openOrClosed}
             animate={openMenu ? "open" : "closed"}
             initial={"closed"}

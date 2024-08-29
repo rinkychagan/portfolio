@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
-const AnimatedText = ({ text }) => {
+const AnimatedText = ({ text, fontSizeClass = "text-9xl" }) => {
   const [fonts] = useState([
     "Arial",
     "Verdana",
@@ -66,8 +66,7 @@ const AnimatedText = ({ text }) => {
 
   return (
     <div
-      className="text-9xl"
-      style={{ display: "flex", cursor: "pointer" }}
+      className={`flex cursor-pointer ${fontSizeClass}`}
       onClick={handleToggle}
     >
       {text.split("").map((char, index) => (

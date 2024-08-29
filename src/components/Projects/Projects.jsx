@@ -24,7 +24,7 @@ export default function Card({
   return (
     <div className="h-screen relative sticky top-0 flex items-center justify-center overflow-hidden">
       <motion.div
-        className="h-[50em] w-[80em] rounded-lg flex items-center justify-center align-center shadow shadow-xl"
+        className="h-[50em] w-[80em] rounded-lg flex items-center justify-center align-center shadow shadow-2xl"
         style={{
           backgroundColor: color,
           rotate: getRandomRotation(),
