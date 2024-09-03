@@ -13,7 +13,7 @@ export default function Layout({ children, backgroundColor }) {
     };
   };
 
-  const nbOfColumns = 3;
+  const nbOfColumns = 5;
 
   return (
     <div className="stairs" style={{ backgroundColor }}>

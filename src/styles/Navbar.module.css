@@ -1,14 +1,14 @@
 .header {
-  position: -webkit-sticky; /* For older Safari versions */
-  position: sticky; /* Standard property */
+  position: -webkit-sticky;
+  position: sticky;
   top: 5%;
   right: 2vw;
   width: calc(100% - 2vw);
-  height: 0px; /* Adjust height as needed */
+  height: 0px;
   background: none;
   display: flex;
   flex-direction: row;
   justify-content: end;
-  z-index: 300; /* Higher than the dropdown menu */
+  z-index: 300;
   cursor: pointer;
 }

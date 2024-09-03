@@ -2,11 +2,12 @@ import React from "react";
 import Stairs from "./../components/Stairs/stairs";
 import { HiSparkles } from "react-icons/hi2";
 import { PiStarFourFill } from "react-icons/pi";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
     <Stairs>
-      <div className="relative min-h-screen">
+      <div className="relative min-h-screen bg-[#CCEBD6]">
         <SectionOne />
       </div>
     </Stairs>
@@ -14,23 +15,49 @@ export default function About() {
 }
 
 const SectionOne = () => {
+  const FadeIn = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.5,
+      },
+    },
+  };
+
   return (
-    <section className="sticky top-0 bg-[#F18DA7] min-h-screen flex items-center justify-center px-4 py-6">
-      <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 text-[#448158]">
+    <section className="sticky top-0 bg-[#C6DA83] min-h-screen flex items-center justify-center px-4 py-6">
+      <motion.div
+        className="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 text-[#160923]"
+        variants={FadeIn}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
         <div className="flex-shrink-0">
-          <PiStarFourFill className="text-[#EBE2D0] animate-wiggle w-10 h-10 sm:w-10 sm:h-10 mr-2 rotate-12" />
-          <img
+          <PiStarFourFill className="text-[#F7E7CE] animate-wiggle w-10 h-10 sm:w-10 sm:h-10 mr-2 rotate-12" />
+          <motion.img
             src="me.png"
-            alt="me"
+            alt="Portrait of Rinky, a junior full-stack developer"
             className="w-64 lg:w-80 max-w-full object-cover -rotate-12"
           />
-          <HiSparkles className=" text-[#EBE2D0] animate-pulse w-10 h-10 sm:w-10 sm:h-10  rotate-12" />
+          <HiSparkles className="text-[#F7E7CE] animate-pulse w-10 h-10 sm:w-10 sm:h-10 rotate-12" />
         </div>
         <div className="text-center lg:text-left max-w-md lg:max-w-lg text-sm leading-relaxed font-bree-serif space-y-4">
-          <HiSparkles className="text-[#EBE2D0] animate-pulse w-10 h-10 sm:w-10 sm:h-10 ml-20 rotate-12" />
-          <p className="text-lg font-semibold">
+          <HiSparkles className="text-[#F7E7CE] animate-pulse w-10 h-10 sm:w-10 sm:h-10 ml-20 rotate-12" />
+          <motion.p
+            className="text-lg font-semibold"
+            variants={FadeIn}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
             <span className="text-3xl">H</span>ello there!
-          </p>
+          </motion.p>
           <p>Nice to meet you!</p>
           <p>I'm Rinky, a junior full-stack developer from Portugal.</p>
           <p>
@@ -65,16 +92,18 @@ const SectionOne = () => {
               className="hover:underline cursor-pointer ml-1 mr-1"
               href="cvdownload.pdf"
               download="cvdownload.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               download my CV
             </a>
             to learn more about my skills and experience. Don’t hesitate to
             reach out, I look forward to hearing from you!
           </p>
-          <PiStarFourFill className="text-[#EBE2D0] animate-wiggle w-10 h-10 sm:w-10 sm:h-10 rotate-12" />
+          <PiStarFourFill className="text-[#F7E7CE] animate-wiggle w-10 h-10 sm:w-10 sm:h-10 rotate-12" />
         </div>
-        <HiSparkles className="text-[#EBE2D0] animate-pulse w-10 h-10 sm:w-20 sm:h-20 mr-2 mt-40 rotate-12" />
-      </div>
+        <HiSparkles className="text-[#F7E7CE] animate-pulse w-10 h-10 sm:w-20 sm:h-20 mr-2 mt-40 rotate-12" />
+      </motion.div>
     </section>
   );
 };

@@ -12,7 +12,7 @@ export default function Navbar() {
       transition: {
         duration: 0.75,
         ease: [0.7, 0, 0.24, 1],
-        staggerChildren: 0.3, // Reduced stagger to keep animations smoother
+        staggerChildren: 0.3,
       },
     },
     closed: {
@@ -38,17 +38,17 @@ export default function Navbar() {
   };
 
   return (
-    <div className="">
+    <div>
       <div className="fixed top-0 left-0 w-full flex justify-between items-center p-4 bg-transparent z-50">
         <a
           href="/home"
-          className="text-[#448158] font-teko font-semibold text-lg"
+          className="text-[#c63c6f] font-chivo font-semibold text-lg"
         >
           rinky
         </a>
         <div className="flex justify-end">
           <TiThMenu
-            className="w-12 h-12 bg-white p-2 rounded-full cursor-pointer text-[#448158]"
+            className="w-12 h-12 bg-[#E3F2E1] p-2 rounded-full cursor-pointer text-[#c63c6f]"
             onClick={() => setOpenMenu((prev) => !prev)}
           />
         </div>
@@ -57,15 +57,15 @@ export default function Navbar() {
       <AnimatePresence>
         {openMenu && (
           <motion.div
-            className="fixed top-0 right-0 w-full h-full bg-[#A1C85A] z-40 flex flex-col justify-between items-center text-4xl lg:w-[20%] shadow shadow-lg"
+            className="fixed top-0 right-0 w-full h-full bg-[#E3F2E1] z-40 flex flex-col justify-between items-center text-4xl lg:w-[20%] shadow shadow-lg"
             variants={openOrClosed}
             animate={openMenu ? "open" : "closed"}
             initial={"closed"}
           >
-            <div className="flex flex-col items-center justify-center flex-grow font-teko ">
+            <div className="flex flex-col items-center justify-center flex-grow font-teko">
               <motion.a
                 href="/home"
-                className="block p-4 text-white hover:underline "
+                className="block p-4 text-[#c63c6f] hover:underline"
                 variants={linkVariants}
                 initial="hidden"
                 animate="visible"
@@ -74,7 +74,7 @@ export default function Navbar() {
               </motion.a>
               <motion.a
                 href="/about"
-                className="block p-4 text-white hover:underline"
+                className="block p-4 text-[#c63c6f] hover:underline"
                 variants={linkVariants}
                 initial="hidden"
                 animate="visible"
@@ -83,7 +83,7 @@ export default function Navbar() {
               </motion.a>
               <motion.a
                 href="/contact"
-                className="block p-4 text-white hover:underline"
+                className="block p-4 text-[#c63c6f] hover:underline"
                 variants={linkVariants}
                 initial="hidden"
                 animate="visible"
@@ -96,7 +96,7 @@ export default function Navbar() {
                 href="https://www.linkedin.com/in/rinky-chagan/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 text-white hover:underline text-sm font-chivo"
+                className="p-4 text-[#c63c6f] hover:underline text-sm font-chivo"
                 variants={linkVariants}
                 initial="hidden"
                 animate="visible"
@@ -104,9 +104,20 @@ export default function Navbar() {
                 LinkedIn
               </motion.a>
               <motion.a
+                href="https://github.com/rinkychagan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 text-[#c63c6f] hover:underline text-sm font-chivo"
+                variants={linkVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                Github
+              </motion.a>
+              <motion.a
                 href="cvdownload.pdf"
                 download="cvdownload.pdf"
-                className="p-4 text-white hover:underline text-sm font-chivo"
+                className="p-4 text-[#c63c6f] hover:underline text-sm font-chivo"
                 variants={linkVariants}
                 initial="hidden"
                 animate="visible"

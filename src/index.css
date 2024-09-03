@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Chivo:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Teko:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barrio&display=swap");
 
 * {
   box-sizing: border-box;
@@ -21,4 +22,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+html {
+  scroll-behavior: smooth;
 }

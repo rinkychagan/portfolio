@@ -14,11 +14,11 @@ const AnimatedText = ({ text, fontSizeClass = "text-9xl" }) => {
   ]);
 
   const [colors] = useState([
-    "#94BAD0",
-    "#F5B5CF",
-    "#EBE2D0",
-    "#A1C85A",
-    "#C68BF5",
+    "#D3F9D8",
+    "#F7E09C",
+    "#87CEEB",
+    "#E5D6F0",
+    "#FFC0CB",
   ]);
 
   const [currentFonts, setCurrentFonts] = useState([]);

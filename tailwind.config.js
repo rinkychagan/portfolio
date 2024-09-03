@@ -9,6 +9,7 @@ module.exports = {
         chivo: ["Chivo", "sans-serif"],
         "lilita-one": ["Lilita One", "cursive"],
         teko: ["Teko", "sans-serif"],
+        barrio: ["Barrio", "system-ui"],
       },
       keyframes: {
         wiggle: {
