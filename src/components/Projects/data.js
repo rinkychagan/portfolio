@@ -38,7 +38,7 @@ export const data = [
   {
     title: "donezo. - Task Manager",
     description:
-      "donezo. is Task Manager app is a dynamic and user-friendly tool designed to help you efficiently organize and manage your tasks. With an intuitive interface built using React and styled with Tailwind CSS, the app features a clean grid layout of sticky notes for easy task management. Each note is scrollable, allowing you to view and edit task details without cluttering your workspace. The app includes features such as task creation, completion tracking. Whether you're managing personal to-dos or coordinating team projects, our Task Manager app streamlines your workflow and keeps you on top of your tasks.",
+      "donezo. is Task Manager app is a dynamic and user-friendly tool designed to help you efficiently organize and manage your tasks. With an intuitive interface built using React and styled with Tailwind CSS, the app features a clean grid layout of sticky notes for easy task management. Each note is scrollable, allowing you to view and edit task details without cluttering your workspace. The app includes features such as task creation, completion tracking.",
     technology: "React.js, MongoDB, TailwindCSS, Express.js",
     image: "donezo.png",
     color: "#A1C85A",

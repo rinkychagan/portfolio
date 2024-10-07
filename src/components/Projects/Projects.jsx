@@ -1,11 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import { FaGithubSquare } from "react-icons/fa";
 
 export default function Card({
   title,
   description,
-  color,
   github,
   technology,
   image,
@@ -19,6 +18,12 @@ export default function Card({
 
   const getRandomRotation = () => {
     return Math.random() * 10 - 5;
+  };
+
+  const [isZoomed, setIsZoomed] = useState(false);
+
+  const handleImageClick = () => {
+    setIsZoomed(!isZoomed);
   };
 
   return (
@@ -41,9 +46,15 @@ export default function Card({
           <img
             src={image}
             alt={`Screenshot of ${title}`}
-            className="w-full md:w-1/2 rounded-lg mb-4 md:mb-0 "
+            className={`w-full md:w-1/2 rounded-lg mb-4 md:mb-0 transition-transform duration-300 ${
+              isZoomed
+                ? "scale-150 z-10 transform translate-x-[-50%] translate-y-[-50%] absolute top-1/2 left-1/2"
+                : ""
+            }`}
+            onClick={handleImageClick}
+            style={{ cursor: "pointer" }}
           />
-          <div className="flex flex-col text-center md:text-left w-full md:w-auto  overflow-y-auto">
+          <div className="flex flex-col text-center md:text-left w-full md:w-auto overflow-y-auto">
             <p className="mb-2 text-sm md:text-base">
               <span className="font-bold">Description:</span> {description}
             </p>
