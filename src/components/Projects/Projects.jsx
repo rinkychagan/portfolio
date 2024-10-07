@@ -41,7 +41,7 @@ export default function Card({
           <img
             src={image}
             alt={`Screenshot of ${title}`}
-            className="w-full md:w-1/2 rounded-lg mb-4 md:mb-0 border-4 border-solid border-[#C63C6F]"
+            className="w-full md:w-1/2 rounded-lg mb-4 md:mb-0 "
           />
           <div className="flex flex-col text-center md:text-left w-full md:w-auto  overflow-y-auto">
             <p className="mb-2 text-sm md:text-base">
