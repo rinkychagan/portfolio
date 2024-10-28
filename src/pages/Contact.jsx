@@ -51,7 +51,7 @@ export default function Contact() {
           <div className="flex flex-col sm:flex-row items-center mb-4 mt-2">
             <HiSparkles className="animate-wiggle w-10 h-10 sm:w-20 sm:h-20 mr-2 rotate-12 text-[#c63c6f]" />
 
-            <TypewriterText text="Contact me here:" />
+            <TypewriterText className="" text="Contact me here:" />
 
             <PiStarFourFill className="animate-pulse w-8 h-8 sm:w-10 sm:h-10 ml-2 mt-4 -rotate-3 text-[#c63c6f]" />
           </div>

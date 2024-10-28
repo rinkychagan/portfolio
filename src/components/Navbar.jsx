@@ -82,6 +82,15 @@ export default function Navbar() {
                 About
               </motion.a>
               <motion.a
+                href="/projects"
+                className="block p-4 text-[#c63c6f] hover:underline"
+                variants={linkVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                Projects
+              </motion.a>
+              <motion.a
                 href="/contact"
                 className="block p-4 text-[#c63c6f] hover:underline"
                 variants={linkVariants}

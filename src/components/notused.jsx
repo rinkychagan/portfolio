@@ -416,3 +416,190 @@ const ProjectTwo = ({ scrollYProgress }) => {
     </motion.section>
   );
 };
+
+
+
+import React, { useState } from "react";
+import Stairs from "./../components/Stairs/stairs";
+import { HiSparkles } from "react-icons/hi2";
+import { PiStarFourFill } from "react-icons/pi";
+import { FaReact, FaNodeJs, FaFigma } from "react-icons/fa";
+import { motion, useScroll, useTransform } from "framer-motion";
+
+export default function About() {
+  const [activeSection, setActiveSection] = useState("about");
+
+  return (
+    <div className="flex">
+      {/* Sidebar */}
+      <div className="w-1/5 h-screen bg-[#557F59] flex flex-col items-center p-4">
+        <button
+          onClick={() => setActiveSection("about")}
+          className={`text-2xl font-bold mb-4 ${
+            activeSection === "about" ? "text-white" : "text-gray-300"
+          }`}
+        >
+          About Me
+        </button>
+        <button
+          onClick={() => setActiveSection("skills")}
+          className={`text-2xl font-bold ${
+            activeSection === "skills" ? "text-white" : "text-gray-300"
+          }`}
+        >
+          Skills
+        </button>
+      </div>
+
+      {/* Main Content */}
+      <Stairs>
+        <div className="w-4/5 min-h-screen">
+          {activeSection === "about" ? <SectionOne /> : <SectionTwo />}
+        </div>
+      </Stairs>
+    </div>
+  );
+}
+
+const SectionOne = () => {
+  const FadeIn = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0.2,
+      transition: {
+        delay: 0.2,
+      },
+    },
+  };
+
+  return (
+    <section className="sticky top-0 bg-[#C6DA83] min-h-screen flex items-center justify-center px-4 py-6">
+      <motion.div
+        className="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 text-[#160923] max-w-5xl mx-auto"
+        variants={FadeIn}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
+        <div className="flex-shrink-0">
+          <PiStarFourFill className="text-[#F7E7CE] animate-wiggle w-8 h-8 sm:w-10 sm:h-10 mr-2 rotate-12 hidden lg:block" />
+          <motion.img
+            src="me.png"
+            alt="Portrait of Rinky, a junior full-stack developer"
+            className="hidden lg:block w-64 lg:w-80 max-w-full object-cover -rotate-12"
+          />
+          <HiSparkles className="text-[#F7E7CE] animate-pulse w-8 h-8 sm:w-10 sm:h-10 rotate-12 hidden lg:block" />
+        </div>
+        <div className="text-center lg:text-left max-w-md lg:max-w-lg text-sm sm:text-base lg:text-lg leading-relaxed font-bree-serif space-y-4">
+          <HiSparkles className="text-[#F7E7CE] animate-pulse w-8 h-8 sm:w-10 sm:h-10 ml-20 rotate-12 hidden lg:block" />
+          <motion.p
+            className="text-lg font-semibold"
+            variants={FadeIn}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
+            <span className="text-3xl">H</span>ello there!
+          </motion.p>
+          <p className="text-sm sm:text-base">Nice to meet you!</p>
+          <p className="text-sm sm:text-base">
+            I'm Rinky, a junior full-stack developer from Portugal.
+          </p>
+          <p className="text-sm sm:text-base">
+            I've been passionate about technology ever since I was a kid. It all
+            started with my time on social media platforms like Tumblr, where
+            everyone had these cool customized blogs. That’s probably where my
+            love for web design began.
+          </p>
+          <p className="text-sm sm:text-base">
+            Although I didn’t dive into the world of tech until recently, a
+            chance encounter with a Bootcamp ad at a bus stop changed my life.
+            That’s how I became a junior full-stack developer — thanks to a bus
+            stop.
+          </p>
+          <p className="text-sm sm:text-base">
+            I enjoy creating user-friendly and aesthetically pleasing
+            experiences through front-end development.
+          </p>
+          <p className="text-sm sm:text-base hidden lg:block">
+            In my personal time, I like to get creative. I enjoy drawing and
+            painting, both on paper and digitally, though I'm still learning how
+            to render digitally. I’ve also recently started learning Blender. On
+            top of that, I love crochet — one of my recent projects was a cozy
+            sweater for winter. I’m also a big fan of concerts, cinema, and
+            collecting figurines or music albums.
+          </p>
+          <p className="text-sm sm:text-base">
+            Thank you for taking the time to learn a bit about me! I'm currently
+            exploring new opportunities and would love to connect. Please feel
+            free to
+            <a
+              className="hover:underline cursor-pointer ml-1 mr-1"
+              href="cvdownload.pdf"
+              download="cvdownload.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              download my CV
+            </a>
+            to learn more about my skills and experience. Don’t hesitate to
+            reach out, I look forward to hearing from you!
+          </p>
+          <PiStarFourFill className="text-[#F7E7CE] animate-wiggle w-8 h-8 sm:w-10 sm:h-10 rotate-12 hidden lg:block" />
+        </div>
+        <HiSparkles className="text-[#F7E7CE] animate-pulse w-8 h-8 sm:w-10 sm:h-10 mr-2 mt-40 rotate-12 hidden lg:block" />
+      </motion.div>
+    </section>
+  );
+};
+
+const SectionTwo = () => {
+  const { scrollY } = useScroll();
+  const opacity = useTransform(scrollY, [800, 1000], [1, 1]);
+  const translateY = useTransform(scrollY, [800, 1000], [0.1, 0]);
+  const bgColor = useTransform(scrollY, [800, 1000], ["#CCEBD6", "#FAF7F0"]);
+
+  return (
+    <motion.section
+      style={{ backgroundColor: bgColor }}
+      className="relative min-h-screen flex items-center justify-center"
+    >
+      <motion.div
+        className="flex flex-col items-center gap-6 px-4 py-6"
+        style={{ opacity, y: translateY }}
+      >
+        <h2 className="text-4xl font-semibold mb-4 font-bree-serif flex items-center text-[#557F59]">
+          Skills
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="flex flex-col items-center rounded-lg shadow-md p-4 bg-[#557F59] text-[#F4D8E6] ">
+            <FaReact className="text-5xl mb-2" />
+            <h3 className="text-xl font-bold font-chivo">Frontend</h3>
+            <p className="font-bree-serif">React</p>
+            <p className="font-bree-serif">JavaScript</p>
+            <p className="font-bree-serif">HTML/CSS</p>
+            <p className="font-bree-serif">Tailwind CSS</p>
+          </div>
+          <div className="flex flex-col items-center rounded-lg shadow-md p-4 bg-[#F4D8E6] text-[#557F59]">
+            <FaNodeJs className="text-5xl mb-2" />
+            <h3 className="text-xl font-bold font-chivo">Backend</h3>
+            <p className="font-bree-serif">Node.js</p>
+            <p className="font-bree-serif">MongoDB</p>
+            <p className="font-bree-serif">Express</p>
+          </div>
+          <div className="flex flex-col items-center rounded-lg shadow-md p-4 bg-[#557F59] text-[#F4D8E6] ">
+            <FaFigma className="text-5xl mb-2" />
+            <h3 className="text-xl font-bold font-chivo">Design Tools</h3>
+            <p className="font-bree-serif">Figma</p>
+            <p className="font-bree-serif">AutoCAD</p>
+            <p className="font-bree-serif">3ds Max</p>
+          </div>
+        </div>
+      </motion.div>
+    </motion.section>
+  );
+};
